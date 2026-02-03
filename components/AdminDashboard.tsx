@@ -2647,7 +2647,7 @@ const AdminDashboardInner: React.FC<Props> = ({ onNavigate, settings, onUpdateSe
 
       {/* REPLACED CONTENT */}
       {false && (
-                  {(hasPermission('MANAGE_CONTENT') || currentUser?.role === 'ADMIN') && (
+                  (hasPermission('MANAGE_CONTENT') || currentUser?.role === 'ADMIN') && (
                   <div className={`col-span-2 sm:col-span-3 md:col-span-4 lg:col-span-6 p-4 rounded-xl border mb-2 transition-colors ${adminBoardContext === 'CBSE' ? 'bg-blue-50 border-blue-100' : 'bg-orange-50 border-orange-100'}`}>
                       <h4 className={`font-black mb-3 text-sm uppercase tracking-wide flex items-center gap-2 ${adminBoardContext === 'CBSE' ? 'text-blue-800' : 'text-orange-800'}`}>
                           {adminBoardContext === 'CBSE' ? <Book size={18}/> : <Globe size={18}/>} 
